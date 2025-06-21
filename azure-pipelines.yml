@@ -38,7 +38,8 @@ stages:
       artifact: staticzip
     - task: AzureWebApp@1
       inputs:
-        azureSubscription: '<service-connection-name>'
+        azureSubscription: 'pay-as-you-go'
         appType: 'webAppLinux'
-        appName: '<your-app-service-name>'
+        appName: 'SRI-HUB-A.aas'
         package: '$(Pipeline.Workspace)/staticzip/**/*.zip'
+
